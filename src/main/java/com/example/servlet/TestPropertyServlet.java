@@ -24,7 +24,7 @@ public class TestPropertyServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
         ServletContext context = this.getServletContext();
         //获取文件绝对路径
-        String path = context.getClassLoader().getResource("messages.properties")
+        String path = context.getClass().getClassLoader().getResource("messages.properties")
                 .getPath();
         FileInputStream in = new FileInputStream(path);
         Properties pros = new Properties();
